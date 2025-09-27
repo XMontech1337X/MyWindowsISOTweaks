@@ -226,6 +226,13 @@
       "ManagerName": "Winget"
     },
     {
+      "Id": "ShareX.ShareX",
+      "Name": "ShareX",
+      "Version": "18.0.1",
+      "Source": "winget",
+      "ManagerName": "Winget"
+    },
+    {
       "Id": "Telegram.TelegramDesktop",
       "Name": "Telegram Desktop",
       "Version": "6.1.3",
