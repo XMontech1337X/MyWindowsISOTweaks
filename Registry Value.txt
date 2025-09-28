@@ -32,7 +32,7 @@ dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:Clipchamp.C
 
 :: Отключение авто-установки ненужного софта с Центра Обновлений.
 reg.exe load "HKLM\TempDefaultUser" "C:\mount\Users\Default\NTUSER.DAT"
-reg.exe add "HKLM\TempDefaultUser\Software\Microsoft\Windows\ContentDeliveryManager" /v "SilentInstalledAppsEnabled" /t REG_DWORD /d 0 /f
+reg.exe add "HKLM\TempDefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "SilentInstalledAppsEnabled" /t REG_DWORD /d 0 /f
 reg.exe add "HKLM\TempDefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "PreInstalledAppsEnabled" /t REG_DWORD /d 0 /f
 reg.exe add "HKLM\TempDefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "OemPreInstalledAppsEnabled" /t REG_DWORD /d 0 /f
 reg.exe add "HKLM\TempDefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "PreInstalledAppsEverEnabled" /t REG_DWORD /d 0 /f
