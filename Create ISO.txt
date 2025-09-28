@@ -1,0 +1,2 @@
+Powershell: .\OSCDIMG -n -d -m D:\CovertToISOFolder D:\SaveISOFile.iso
+Cmd: OSCDIMG -n -d -m D:\CovertToISOFolder D:\SaveISOFile.iso
