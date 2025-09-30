@@ -67,4 +67,4 @@ dism.exe /Unmount-Image /MountDir:C:\mount /Commit
 dism.exe /Delete-Image /ImageFile:F:\Sources\install.wim /Index:# /CheckIntegrity
 
 :: Добавление обновлений в ISO образ.
-dism /mount-wim /wimfile:F:\Sources\install.wim /index:# /mountdir:C:\Updates
+dism.exe /image:F:\Sources\install.wim /PackagePath:C:\Updates
