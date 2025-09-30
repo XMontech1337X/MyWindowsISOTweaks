@@ -1,2 +1,0 @@
-1. CD "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\amd64\Oscdimg"
-2. .\OSCDIMG -n -d -m D:\CovertToISOFolder D:\SaveISOFile.iso
