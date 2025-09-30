@@ -67,4 +67,8 @@ dism.exe /Unmount-Image /MountDir:C:\mount /Commit
 dism.exe /Delete-Image /ImageFile:F:\Sources\install.wim /Index:# /CheckIntegrity
 
 :: Добавление обновлений в ISO образ.
-dism.exe /image:F:\Sources\install.wim /PackagePath:C:\Updates
+dism.exe /Add-Package /image:"C:\mount" /PackagePath:"C:\Updates\*.msu"
+
+:: Создание ISO образа.
+CD "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\amd64\Oscdimg"
+.\OSCDIMG -n -d -m D:\CovertToISOFolder D:\SaveISOFile.iso
