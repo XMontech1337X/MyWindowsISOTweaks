@@ -1,10 +1,14 @@
 :: Создание папки Mount в диске C.
 mkdir C:/Mount
+mkdir C:/Updates
 
 :: Монтирование образа.
 dism.exe /Mount-Image /ImageFile:"F:\sources\install.wim" /Index:# /MountDir:"C:\mount"
 :: Выбери свой индекс в образе
 :: Пример /Index:1
+
+:: Добавление обновлений в ISO образ.
+dism.exe /Add-Package /image:"C:\mount" /PackagePath:"C:\Updates\*.msu"
 
 :: Удаление ненужных UWP приложений.
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:MSTeams_1.0.0.0_x64__8wekyb3d8bbwe
@@ -65,9 +69,6 @@ dism.exe /Unmount-Image /MountDir:C:\mount /Commit
 
 :: Удаление ненужных редакций.
 dism.exe /Delete-Image /ImageFile:F:\Sources\install.wim /Index:# /CheckIntegrity
-
-:: Добавление обновлений в ISO образ.
-dism.exe /Add-Package /image:"C:\mount" /PackagePath:"C:\Updates\*.msu"
 
 :: Создание ISO образа.
 CD "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\amd64\Oscdimg"
