@@ -1,9 +1,13 @@
 :: Создание папки Mount в диске C.
-mkdir C:/Mount
-mkdir C:/Updates
+mkdir C:\ISO
+mkdir C:\Mount
+mkdir C:\Updates
+
+:: Узнать индекс и количество редакций в образе.
+dism.exe /Get-WimInfo /WimFile:"C:\ISO\Sources\install.wim"
 
 :: Монтирование образа.
-dism.exe /Mount-Image /ImageFile:"F:\sources\install.wim" /Index:# /MountDir:"C:\mount"
+dism.exe /Mount-Image /ImageFile:"C:\ISO\Sources\install.wim" /Index:# /MountDir:"C:\mount"
 :: Выбери свой индекс в образе
 :: Пример /Index:1
 
@@ -68,8 +72,8 @@ reg.exe unload "HKLM\TempSOFTWARE"
 dism.exe /Unmount-Image /MountDir:C:\mount /Commit
 
 :: Удаление ненужных редакций.
-dism.exe /Delete-Image /ImageFile:F:\Sources\install.wim /Index:# /CheckIntegrity
+dism.exe /Delete-Image /ImageFile:C:\ISO\Sources\install.wim /Index:# /CheckIntegrity
 
 :: Создание ISO образа.
 CD "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\amd64\Oscdimg"
-.\OSCDIMG -n -d -m D:\CovertToISOFolder D:\SaveISOFile.iso
+.\OSCDIMG -n -d -m C:\ISO C:\ISOFileName.iso
