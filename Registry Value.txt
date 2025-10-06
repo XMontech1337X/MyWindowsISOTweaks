@@ -14,6 +14,9 @@ dism.exe /Mount-Image /ImageFile:"C:\ISO\Sources\install.wim" /Index:# /MountDir
 :: Добавление обновлений в ISO образ.
 dism.exe /Add-Package /image:"C:\mount" /PackagePath:"C:\Updates\*.msu"
 
+# Получить список всех UWP-приложений
+dism.exe /Image:C:\Mount /Get-ProvisionedAppxPackages
+
 :: Удаление ненужных UWP приложений.
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:MSTeams_1.0.0.0_x64__8wekyb3d8bbwe
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:MicrosoftWindows.CrossDevice_1.25062.28.0_neutral_~_cw5n1h2txyewy
