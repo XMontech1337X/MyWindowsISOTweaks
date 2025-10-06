@@ -73,7 +73,3 @@ dism.exe /Unmount-Image /MountDir:C:\mount /Commit
 
 :: Удаление ненужных редакций.
 dism.exe /Delete-Image /ImageFile:C:\ISO\Sources\install.wim /Index:# /CheckIntegrity
-
-:: Создание ISO образа.
-CD "C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\amd64\Oscdimg"
-.\OSCDIMG -n -d -m C:\ISO C:\ISOFileName.iso
