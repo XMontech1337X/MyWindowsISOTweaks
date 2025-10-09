@@ -1,4 +1,4 @@
-:: Создание папки Mount в диске C.
+:: Создание папок Mount, ISO, Updates в диске C.
 mkdir C:\ISO
 mkdir C:\Mount
 mkdir C:\Updates
