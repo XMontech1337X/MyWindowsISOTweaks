@@ -60,8 +60,8 @@ reg.exe add "HKLM\TempSYSTEM\ControlSet001\Control\BitLocker" /v PreventDeviceEn
 reg.exe unload "HKLM\TempSYSTEM"
 
 reg.exe load "HKLM\TempSOFTWARE" "C:\mount\Windows\System32\config\SOFTWARE"
-:: Очистка меню пуск от рекламных ссылок.
-reg.exe add "HKLM\TempSOFTWARE\Microsoft\PolicyManager\current\device\Start" /v ConfigureStartPins /t REG_SZ /d '{"pinnedList": [{}]}' /f
+:: Очистка меню пуск от рекламных приложений и ссылок на них.
+reg.exe add "HKLM\TempSOFTWARE\Microsoft\PolicyManager\current\device\Start" /v ConfigureStartPins /t REG_SZ /d '{\"pinnedList\": [{}]}' /f
 :: Отключение сетевой учетной записи в OOBE.
 reg.exe add "HKLM\TempSOFTWARE\Microsoft\Windows\CurrentVersion\OOBE" /v "HideOnlineAccountScreens" /t REG_DWORD /d 1 /f
 reg.exe add "HKLM\TempSOFTWARE\Microsoft\Windows\CurrentVersion\OOBE" /v "HideWirelessSetupInOOBE" /t REG_DWORD /d 1 /f
