@@ -70,7 +70,6 @@ reg.exe delete "HKLM\TempSOFTWARE\Microsoft\WindowsUpdate\Orchestrator\USchedule
 reg.exe delete "HKLM\TempSOFTWARE\Microsoft\WindowsUpdate\Orchestrator\UScheduler_Oobe\CrossDeviceUpdate" /f
 :: #2 Исправление ошибки 0xc1900500 - 0x20000 в Media Cretion Tool в РФ. [Используй PowerRun]
 reg.exe add "HKLM\TempSOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing" /v "CountryCode" /t REG_SZ /d "US" /f
-
 reg.exe unload "HKLM\TempSOFTWARE"
 
 :: Размонтирование образа и сохранение изменений.
