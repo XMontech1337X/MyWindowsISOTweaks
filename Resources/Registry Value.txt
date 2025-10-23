@@ -1,5 +1,5 @@
+* ПОДГОТОВКА К РЕДАКТИРОВАНИЮ ISO ОБРАЗА *
 # СНАЧАЛА ОТКРОЙ Powershell через программу PowerRun, чтобы получить права TrustedInstaller/System.
-
 # Создание папок Mount, ISO, Updates в диске C.
 mkdir C:\ISO
 mkdir C:\Mount
