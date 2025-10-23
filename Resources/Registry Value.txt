@@ -19,13 +19,10 @@ dism.exe /Image:C:\Mount /Get-ProvisionedAppxPackages
 
 :: Удаление ненужных UWP приложений.
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:MSTeams_1.0.0.0_x64__8wekyb3d8bbwe
-dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:MicrosoftWindows.CrossDevice_1.25062.28.0_neutral_~_cw5n1h2txyewy
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:MicrosoftWindows.Client.WebExperience_525.18101.90.9_neutral_~_cw5n1h2txyewy
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:MicrosoftCorporationII.QuickAssist_2025.331.2057.0_neutral_~_8wekyb3d8bbwe
-dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:Microsoft.YourPhone_1.25062.84.0_neutral_~_8wekyb3d8bbwe
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsSoundRecorder_2021.2504.0.0_neutral_~_8wekyb3d8bbwe
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsFeedbackHub_2024.125.1522.0_neutral_~_8wekyb3d8bbwe
-dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsCamera_2022.2505.2.0_neutral_~_8wekyb3d8bbwe
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:Microsoft.WindowsAlarms_2021.2503.4.0_neutral_~_8wekyb3d8bbwe
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:Microsoft.Windows.DevHome_0.1701.597.0_neutral_~_8wekyb3d8bbwe
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:Microsoft.Todos_2.120.7961.0_neutral_~_8wekyb3d8bbwe
@@ -35,7 +32,6 @@ dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:Microsoft.O
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:Microsoft.MicrosoftStickyNotes_6.1.5.0_neutral_~_8wekyb3d8bbwe
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:Microsoft.MicrosoftSolitaireCollection_4.22.3190.0_neutral_~_8wekyb3d8bbwe
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:Microsoft.MicrosoftOfficeHub_19.2506.56051.0_neutral_~_8wekyb3d8bbwe
-dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:Microsoft.GetHelp_10.2407.22193.0_neutral_~_8wekyb3d8bbwe
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingWeather_4.54.63017.0_neutral_~_8wekyb3d8bbwe
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingSearch_2022.1.33.0_neutral_~_8wekyb3d8bbwe
 dism.exe /Image:C:\mount /Remove-ProvisionedAppxPackage /PackageName:Microsoft.BingNews_4.1.24002.0_neutral_~_8wekyb3d8bbwe
