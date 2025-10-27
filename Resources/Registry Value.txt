@@ -62,10 +62,10 @@ reg.exe add "HKLM\TempDefaultUser\Software\Microsoft\Windows\CurrentVersion\Cont
 reg.exe add "HKLM\TempDefaultUser\Software\Microsoft\Windows\CurrentVersion\ContentDeliveryManager" /v "ContentDeliveryAllowed" /t REG_DWORD /d 0 /f
 reg.exe delete "HKLM\TempDefaultUser\Software\Microsoft\Windows\CurrentVersion\Run" /v  "OneDriveSetup" /f
 
-:: Отключение авто-кодирования диска через BitLocker.
+:: Отключение выполнение программы из таблицы Windows Platform Binary Table (WPBT) при запуске Windows.
 reg.exe add "HKLM\TempSYSTEM\ControlSet001\Control\Session Manager" /v DisableWpbtExecution /t REG_DWORD /d 1 /f
 
-:: Отключение выполнение программы из таблицы Windows Platform Binary Table (WPBT) при запуске Windows.
+:: Отключение авто-кодирования диска через BitLocker.
 reg.exe add "HKLM\TempSYSTEM\ControlSet001\Control\BitLocker" /v PreventDeviceEncryption /t REG_DWORD /d 1 /f
 
 :: Очистка меню пуск от рекламных приложений и ссылок на них.
@@ -82,8 +82,6 @@ reg.exe delete "HKLM\TempSOFTWARE\Microsoft\WindowsUpdate\Orchestrator\USchedule
 
 # Исправление ошибки 0xc1900500 - 0x20000 в Media Cretion Tool в РФ.
 reg.exe add "HKLM\TempSOFTWARE\Microsoft\Windows\CurrentVersion\Component Based Servicing" /v "CountryCode" /t REG_SZ /d "US" /f
-reg.exe add "HKLM\TempDefaultUser\Control Panel\International\Geo" /v "Name" /t REG_SZ /d "US" /f
-reg.exe add "HKLM\TempDefaultUser\Control Panel\International\Geo" /v "Nation" /t REG_SZ /d "244" /f
 
 # Выгрузка ненужных ветов реестра.
 reg.exe unload "HKLM\TempDefaultUser"
